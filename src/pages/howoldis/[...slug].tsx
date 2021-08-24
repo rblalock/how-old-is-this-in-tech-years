@@ -15,21 +15,29 @@ const Detail = (props: Props) => {
 		// Default colors
 		let bgGradient = 'from-red-700 via-red-500 to-yellow-300';
 		let title = 'text-yellow-300';
-		let titleBgGradient = 'from-yellow-400 via-red-700 to-yellow-500 border border-yellow-500';
+		let titleBgGradient = 'from-red-400 via-red-700 to-red-500 border border-yellow-900';
+
+		// NOT DOING THEMES BASED ON YEARS FOR NOW
+		// 2000's colors
+		// if (props.calculatedYear && props.calculatedYear > 15) {
+		// 	bgGradient = 'from-red-700 via-red-500 to-yellow-300';
+		// 	title = 'text-yellow-300';
+		// 	titleBgGradient = 'from-yellow-400 via-red-700 to-yellow-500 border border-yellow-500';
+		// }
 
 		// 90's colors
-		if (props.calculatedYear && props.calculatedYear > 25) {
-			bgGradient = 'from-blue-700 via-blue-500 to-blue-300';
-			title = 'text-blue-200';
-			titleBgGradient = 'from-blue-400 via-blue-700 to-blue-500 border border-blue-500';
-		}
+		// if (props.calculatedYear && props.calculatedYear > 25) {
+		// 	bgGradient = 'from-blue-700 via-blue-500 to-blue-300';
+		// 	title = 'text-blue-200';
+		// 	titleBgGradient = 'from-blue-400 via-blue-700 to-blue-500 border border-blue-500';
+		// }
 
 		// 80's colors
-		if (props.calculatedYear && props.calculatedYear > 35) {
-			bgGradient = 'from-purple-700 via-pink-700 to-blue-700';
-			title = 'text-pink-100';
-			titleBgGradient = 'from-pink-800 via-purple-800 to-blue-500 border border-blue-900';
-		}
+		// if (props.calculatedYear && props.calculatedYear > 35) {
+		// 	bgGradient = 'from-purple-700 via-pink-700 to-blue-700';
+		// 	title = 'text-pink-100';
+		// 	titleBgGradient = 'from-pink-800 via-purple-800 to-blue-500 border border-blue-900';
+		// }
 
 		return {
 			bgGradient,
@@ -66,16 +74,16 @@ const Detail = (props: Props) => {
 
 					<div className="px-10 pt-20 pb-40 mx-auto text-center w-full">
 						{/* Main Text */}
-						<div className="relative w-full bg-cover">
+						<div className="relative w-94 h-64 bg-cover">
 							<div className="relative flex items-center justify-center w-full h-full">
-								<div className={`space-y-8 shadow-xl rounded-2xl p-16 opacity-90 bg-gradient-to-br ${colors.titleBgGradient}`}>
+								<div className={`space-y-8 shadow-2xl rounded-2xl p-16 opacity-90 bg-gradient-to-br ${colors.titleBgGradient}`}>
 									<div className="relative">
 										<h1 className="text-4xl font-extrabold text-gray-100 sm:text-5xl">
 											{props.name && props.year ? (
 												<>
 													<span className={`${colors.title}`}>{props.name}</span> 
 													<br />is
-													<br /><span className={`${colors.title} underline`}>{props.calculatedYear}</span> tech years old
+													<br /><span className={`${colors.title} underline`}>{Math.trunc(props.calculatedYear || 0)}</span> tech years old
 												</>
 											) : (
 												<>

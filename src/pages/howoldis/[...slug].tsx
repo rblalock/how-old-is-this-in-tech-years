@@ -128,15 +128,20 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 	const year = params?.slug?.[1]?.toString() || null;
 
     if (name && year) {
-        return {
-          props: {
-            name: name.toUpperCase(),
-						year,
-						// todo - apply real formula to gen. this. Right now it's literal
-						calculatedYear: (new Date().getFullYear()) - parseInt(year)
-          },
-          revalidate: 5
-        };
+			// todo - Ref. how formula has come about by linking to public notebook
+			const X = (new Date().getFullYear()) - parseInt(year);
+			const m = Math.log(2);
+			const c = Math.log(1);
+			const calculatedYear = m * X + c;
+
+			return {
+				props: {
+					name: name.toUpperCase(),
+					year,
+					calculatedYear
+				},
+				revalidate: 5
+			};
     }
 
 		return {

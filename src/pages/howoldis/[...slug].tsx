@@ -137,10 +137,11 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
     if (name && year) {
 			// todo - Ref. how formula has come about by linking to public notebook
+			const multiplier = 3
 			const X = (new Date().getFullYear()) - parseInt(year);
 			const m = Math.log(2);
 			const c = Math.log(1);
-			const calculatedYear = m * X + c;
+			const calculatedYear = (m * X + c) * multiplier;
 
 			return {
 				props: {

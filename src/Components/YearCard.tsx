@@ -15,7 +15,7 @@ const YearCard = (props: YearCardProps) => {
 						<h1 className="text-4xl font-extrabold text-gray-100 sm:text-5xl">
 							{props.name && props.year ? (
 								<>
-									<span className={`text-yellow-300`}>{props.name}</span> 
+									<span className={`text-yellow-300`}>{props.name.toUpperCase()}</span> 
 									<br />is
 									<br /><span className={`text-yellow-300 underline`}>{Math.trunc(props.calculatedYear || 0)}</span> tech years old
 								</>

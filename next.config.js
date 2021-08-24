@@ -7,8 +7,8 @@ module.exports = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   basePath: '',
-  // The starter code load resources from `public` folder with `router.basePath` in React components.
-  // So, the source code is "basePath-ready".
-  // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
+	env: {
+		SITE_URL: process.env.SITE_URL || (process.env.NODE_ENV !== 'production' && !process.env.SITE_URL) ? 'http://localhost:3000' : undefined || 'https://how-old-is-this-in-tech-years.vercel.app',
+	},
 });

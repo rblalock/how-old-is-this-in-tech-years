@@ -5,6 +5,7 @@ type IMetaProps = {
   title: string;
   description: string;
   canonical?: string;
+	image?: string;
 };
 
 const Meta = (props: IMetaProps) => {
@@ -27,6 +28,9 @@ const Meta = (props: IMetaProps) => {
           description: props.description,
           url: props.canonical,
           site_name: 'In Tech Years',
+					images: props.image ? [{
+						url: props.image
+					}] : undefined
         }}
       />
     </>

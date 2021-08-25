@@ -45,14 +45,14 @@ const Detail = (props: Props) => {
 							href="/"
 							className="flex items-center mb-4 font-medium text-gray-100 order-none w-auto justify-center md:mb-0"
 						>
-							<span className="text-3xl md:text-5xl text-gray-100 select-none logo font-black">
+							<span className="text-3xl md:text-5xl text-gray-100 select-none logo font-black text-center">
 								<span className={`text-yellow-300 mr-3 underline`}>How old is this</span>
-								<span className="text-white italic font-extralight">in tech years?</span>
+								<span className="text-white italic font-extralight block md:inline">in tech years?</span>
 							</span>
 						</a>
 					</div>
 
-					<div className="px-10 pt-20 pb-40 mx-auto text-center w-full">
+					<div className="px-10 pt-20 pb-40 mt-10 mx-auto text-center w-full">
 						<YearCard
 							year={props.year}
 							name={props.name}

@@ -36,9 +36,9 @@ const Index = () => {
 							href="/"
 							className="flex items-center mb-4 font-medium text-gray-100 order-none w-auto justify-center md:mb-0"
 						>
-							<span className="text-3xl md:text-5xl text-gray-100 select-none logo font-black">
+							<span className="text-3xl md:text-5xl text-gray-100 select-none logo font-black text-center">
 								<span className="text-yellow-300 mr-3 underline">How old is this</span>
-								<span className="text-white font-extralight">in tech years?</span>
+								<span className="text-white font-extralight block md:inline">in tech years?</span>
 							</span>
 						</a>
 					</div>
@@ -49,11 +49,11 @@ const Index = () => {
 							<div className="relative flex flex-col items-center justify-center w-full h-full lg:pr-10">
 								<div className="flex flex-col items-start space-y-8">
 									<div className="relative">
-										<h1 className="text-5xl font-extrabold leading-tight text-gray-100 sm:text-7xl md:text-7xl">
+										<h1 className="text-4xl font-extrabold leading-tight text-gray-100 sm:text-7xl md:text-7xl text-center lg:text-left">
 											Ever wondered how old something is <br /><span className="text-yellow-200">in tech years</span>?
 										</h1>
 									</div>
-									<p className="text-2xl text-red-100">
+									<p className="text-2xl text-red-100 text-center lg:text-left w-full">
 										Now you can find out, try it!
 									</p>
 								</div>

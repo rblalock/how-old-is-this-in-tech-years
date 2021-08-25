@@ -54,8 +54,9 @@ const Index = () => {
 											Ever wondered how old something is <br /><span className="text-yellow-200">in tech years</span>?
 										</h1>
 									</div>
-									<p className="text-2xl text-red-100 text-center lg:text-left w-full">
-										Now you can find out, try it!
+									<p className="text-2xl text-white text-center lg:text-left w-full">
+										We all know what dog years are but what about <strong>tech years</strong>?  The speed of tech dates things fast.
+										Now you can find out how fast, try it!
 									</p>
 								</div>
 							</div>

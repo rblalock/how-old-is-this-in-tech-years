@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import ReactPlayer from 'react-player';
 
 import { Meta } from '../../Components/Meta';
 import Layout from '../../Components/Layout';
@@ -13,6 +15,8 @@ type Props = {
 };
 
 const Detail = (props: Props) => {
+	const router = useRouter();
+
 	const socialImage = useMemo(() => {
 		if (props.calculatedYear && props.name) {
 			return `${IMAGE_URL}/**${props.name}**%20is%20**${Math.trunc(props.calculatedYear)}**%20tech%20years%20old.png?md=1&theme=dark`;
@@ -60,6 +64,12 @@ const Detail = (props: Props) => {
 			{/* How it works link */}
 			<section className="py-20 bg-white">
 				<div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+					{router.query && router.query.youtube ? (
+						<div className="flex justify-center mb-10">
+							<ReactPlayer url={router.query.youtube} />
+						</div>
+					) : null}
+
 					<p className="max-w-md mx-auto text-base text-gray-500 sm:text-lg md:text-xl md:max-w-3xl mb-10">
 						Want to see how old something is? <a href="/" className="text-red-500 font-bold">Try it!</a>
 					</p>

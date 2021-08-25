@@ -98,7 +98,7 @@ const Index = () => {
 				</div>
 			</section>
 
-			{/* Examples to test out 2 */}
+			{/* Examples */}
 			<section className="py-20 bg-white">
 				<div className="flex flex-col items-center px-10 mx-auto space-y-20 lg:space-y-0 lg:flex-row max-w-7xl">
 					<div className="flex flex-col justify-center flex-shrink-0 w-full h-full max-w-lg space-y-5 text-gray-800 lg:max-w-none lg:w-5/12 xl:w-6/12">
@@ -248,6 +248,57 @@ const Index = () => {
 										fillRule="evenodd"
 									/>
 								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* More Examples */}
+			<section className="pt-20 pb-32 bg-white">
+				<div className="max-w-7xl px-20 mx-auto">
+					<h2 className="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
+						Or how about something else...
+					</h2>
+					<div className="grid grid-cols-1 mt-16 sm:grid-cols-2 md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-5 lg:gap-y-20">
+						<div className="border shadow-lg p-10 rounded-xl hover:bg-gray-50 cursor-pointer">
+							<a href={`/howoldis/The%20Moon%20Landing/1969?youtube=${encodeURIComponent('https://www.youtube.com/watch?v=w4wx_3XOrns')}`}>
+								<h3 className="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">
+									The Moon Landing
+								</h3>
+								<p className="text-sm text-gray-500 lg:text-base">
+									How long ago in tech years was the moon landing?
+								</p>
+							</a>
+						</div>
+						<div className="border shadow-lg p-10 rounded-xl hover:bg-gray-50 cursor-pointer">
+							<a href={`/howoldis/The%20iPhone%20/2007?youtube=${encodeURIComponent('https://www.youtube.com/watch?v=MnrJzXM7a6o')}`}>
+								<h3 className="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">
+									The iPhone
+								</h3>
+								<p className="text-sm text-gray-500 lg:text-base">
+									How old in tech years is the original iPhone?
+								</p>
+							</a>
+						</div>
+						<div className="border shadow-lg p-10 rounded-xl hover:bg-gray-50 cursor-pointer">
+							<a href={`/howoldis/DEVELOPERS!%20DEVELOPERS!%20DEVELOPERS!/2000?youtube=${encodeURIComponent('https://youtu.be/EMldOiiG1Ko')}`}>
+								<h3 className="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">
+									DEVELOPERS! DEVELOPERS! DEVELOPERS!
+								</h3>
+								<p className="text-sm text-gray-500 lg:text-base">
+									How long ago did Steve make that fateful speech?
+								</p>
+							</a>
+						</div>
+						<div className="border shadow-lg p-10 rounded-xl hover:bg-gray-50 cursor-pointer">
+							<a href={`/howoldis/Never%20gonna%20give%20you%20up/1987?youtube=${encodeURIComponent('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}`}>
+								<h3 className="mb-2 text-base font-semibold leading-tight text-gray-900 lg:text-lg">
+									"Never gonna give you up"
+								</h3>
+								<p className="text-sm text-gray-500 lg:text-base">
+									Seriously, how old in tech years is this song anyway?
+								</p>
 							</a>
 						</div>
 					</div>

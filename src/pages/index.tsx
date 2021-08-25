@@ -22,6 +22,7 @@ const Index = () => {
 				<Meta
           title="In Tech Years"
           description="Measure the age of something in 'Tech Years'"
+					image="/images/intechyears.jpg"
         />
 
 			<section className="relative w-full bg-center bg-cover">

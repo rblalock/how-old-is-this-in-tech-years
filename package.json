@@ -13,10 +13,8 @@
     "build-types": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^10.1.0",
     "next": "^11.1.0",
     "next-seo": "^4.26.0",
-    "puppeteer-core": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-jsx-plugin-postcss": "^4.0.1"

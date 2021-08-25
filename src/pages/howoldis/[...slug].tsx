@@ -17,7 +17,7 @@ const Detail = (props: Props) => {
 				<Meta
           title={`${props.name} is ${props.calculatedYear?.toFixed(1)} tech years old`}
           description={`${props.name} is ${props.calculatedYear?.toFixed(1)} tech years old`}
-					image={props.name && props.year ? `/api/socialimage/${props.year}/${props.name}/${props.calculatedYear}` : undefined}
+					// image={props.name && props.year ? `/api/socialimage/${props.year}/${props.name}/${props.calculatedYear}` : undefined}
         />
 
 			<section className="relative w-full bg-center bg-cover">

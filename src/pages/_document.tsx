@@ -5,7 +5,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+					<script defer data-domain="intechyears.com" src="https://plausible.io/js/plausible.js"></script>
+				</Head>
         <body>
           <Main />
           <NextScript />

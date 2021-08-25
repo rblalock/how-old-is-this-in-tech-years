@@ -26,6 +26,9 @@ const Meta = (props: IMetaProps) => {
         title={props.title}
         description={props.description}
         canonical={props.canonical}
+				twitter={{
+					cardType: 'summary_large_image',
+				}}
         openGraph={{
           title: props.title,
           description: props.description,

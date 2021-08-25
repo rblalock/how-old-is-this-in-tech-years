@@ -18,6 +18,9 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
+				{/* Try to work around issue with twitter in NextSEO */}
+				{props.image && <meta name="og:image" content={props.image} />}
+				{props.image && <meta name="twitter:image" content={props.image} />}
       </Head>
       <NextSeo
         title={props.title}

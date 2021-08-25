@@ -9,7 +9,7 @@ const ageImage = async(req: NextApiRequest, res: NextApiResponse) => {
   if (year && name && calculatedYear) {
 		const url = `${SITE_URL}/image?year=${encodeURIComponent(year)}&name=${encodeURIComponent(name)}&calculatedYear=${encodeURIComponent(calculatedYear)}`;
     const file = await screenshot(url);
-		console.log(file);
+
     res.setHeader('Content-Type', `image/png`);
     res.setHeader(
       'Cache-Control',

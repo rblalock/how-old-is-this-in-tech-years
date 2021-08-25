@@ -28,8 +28,8 @@ const Detail = (props: Props) => {
   return (
     <Layout>
 				<Meta
-          title={`${props.name} is ${props.calculatedYear?.toFixed(1)} tech years old`}
-          description={`${props.name} is ${props.calculatedYear?.toFixed(1)} tech years old`}
+          title={`${props.name} is ${Math.trunc(props.calculatedYear || 0)} tech years old`}
+          description={`${props.name} is ${Math.trunc(props.calculatedYear || 0)} tech years old`}
 					image={socialImage}
         />
 
@@ -79,10 +79,11 @@ const Detail = (props: Props) => {
 					</h2>
 					<p className="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
 						Hundreds of years of research (on Mars) has been spent researching exactly how to properly measure things in <em>'tech years'</em>.  Read up on the breakthrough research below.
+						 <span className="text-yellow-500 italic">(see, we have a Jupyter Notebook, it's like officially science)</span>:
 					</p>
 					<div className="flex justify-center mt-8 space-x-3">
 						<a
-							href="#"
+							href="https://github.com/rblalock/how-old-is-this-in-tech-years/blob/master/in_tech_years.ipynb"
 							className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-red-600 border border-transparent rounded-md shadow hover:bg-red-700"
 						>
 							How this works

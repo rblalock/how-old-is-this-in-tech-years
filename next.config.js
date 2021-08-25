@@ -9,6 +9,6 @@ module.exports = withBundleAnalyzer({
   basePath: '',
   reactStrictMode: true,
 	env: {
-		SITE_URL: process.env.SITE_URL || (process.env.NODE_ENV !== 'production' && !process.env.SITE_URL) ? 'http://localhost:3000' : undefined || 'https://how-old-is-this-in-tech-years.vercel.app',
+		SITE_URL: process.env.SITE_URL || (process.env.NODE_ENV !== 'production' && !process.env.SITE_URL) ? 'http://localhost:3000' : undefined || 'https://www.intechyears.com',
 	},
 });

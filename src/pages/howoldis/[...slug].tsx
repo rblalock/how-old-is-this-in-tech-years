@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Meta } from '../../Components/Meta';
 import Layout from '../../Components/Layout';
 import YearCard from '../../Components/YearCard';
+import { IMAGE_URL } from '../../lib/config';
 
 type Props = {
   name?: string | null;
@@ -12,12 +13,20 @@ type Props = {
 };
 
 const Detail = (props: Props) => {
+	const socialImage = useMemo(() => {
+		if (props.calculatedYear && props.name) {
+			return `${IMAGE_URL}/**${props.name}**%20is%20**${Math.trunc(props.calculatedYear)}**%20tech%20years%20old.png?md=1&theme=dark`;
+		} else {
+			return undefined;
+		}
+	}, [props]);
+
   return (
     <Layout>
 				<Meta
           title={`${props.name} is ${props.calculatedYear?.toFixed(1)} tech years old`}
           description={`${props.name} is ${props.calculatedYear?.toFixed(1)} tech years old`}
-					// image={props.name && props.year ? `/api/socialimage/${props.year}/${props.name}/${props.calculatedYear}` : undefined}
+					image={socialImage}
         />
 
 			<section className="relative w-full bg-center bg-cover">

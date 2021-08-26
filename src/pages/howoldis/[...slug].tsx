@@ -29,7 +29,7 @@ const Detail = (props: Props) => {
     <Layout>
 				<Meta
           title={`${props.name} is ${Math.trunc(props.calculatedYear || 0)} tech years old`}
-          description={`${props.name} is ${Math.trunc(props.calculatedYear || 0)} tech years old`}
+          description={`How old is ${props.name} in tech years?`}
 					image={socialImage}
         />
 
